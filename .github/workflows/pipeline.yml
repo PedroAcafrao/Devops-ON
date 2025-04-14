@@ -174,3 +174,4 @@ jobs:
         shell: bash
         run: |
           echo "Deploy PROD" 
+Dsonar.projectKey=pedroacafrao/DevopsImpacta
