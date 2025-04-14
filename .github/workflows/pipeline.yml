@@ -6,6 +6,10 @@ on:
 jobs:
   unit-test:
     runs-on: ubuntu-latest
+
+     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+     run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar - Dsonar.projectKey=pedroacafrao/DevopsImpacta
     
     steps:
     - uses: actions/checkout@v4.2.2
@@ -174,4 +178,4 @@ jobs:
         shell: bash
         run: |
           echo "Deploy PROD" 
-Dsonar.projectKey=pedroacafrao/DevopsImpacta
+
